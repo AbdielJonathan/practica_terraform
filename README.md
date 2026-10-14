@@ -27,13 +27,20 @@ Este repositorio contiene varias carpetas de práctica de terraform (practica_1,
 
 Cada carpeta contiene su propio `.terraform`, es decir, en cada carpeta se ejecuto el comando `terraform init` por separado. Sin embargo, todos los archivos `.terraform` no aparecen debido a que estan ignorados en el `.gitignore`, a excepción de "practica_1" que si contiene su archivo `.teraform` en este repositorio dejado a propósito para mejor entendimiento de la estructura de las carpetas.
 
+### Explicación de las prácticas
+
+- **paractica_1**: Hola mundo con terraform
+- **paractica_2**: Principio DRY
+- **paractica_3**: Ejemplo con Bucket s3 de AWS
+- **paractica_4**:
+
 ---
 
 ## Comandos útiles
 
 Para el uso de estos comandos debes entrar en alguna de las carpetas, practica_2 por ejemplo, y ejecutar: `terraform init`
 
-- `terraform init`: Inicializa el motor de terraform, similar a `git init`
+- `terraform init`: Inicializa el motor de terraform. Se debe ejcutar cada vez que se agrega un nuevo proveedor para que el motor instale las dependencias de ese proveedor.
 - `terraform plan`: Muestra un plan de los cambios que se van a ejecutar
 - `terraform apply`: Aplica los cambios de la infraestructura declarada. Siempre lleva implícito un _terraform plan_ que te muestra los cambios y te pide confirmación previo a ejecutarse.
 - `terraform destroy`: Destruye la infraestructura declarada.
