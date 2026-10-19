@@ -16,11 +16,3 @@ resource "aws_vpc" "vpc_abdiel_ohio" {
   }
   provider = aws.ohio
 }
-
-variable "virginia_cidr" {
-  default = "10.0.0.0/16"
-}
-
-variable "ohio_cidr" {
-  default = "10.0.0.0/16"
-}
