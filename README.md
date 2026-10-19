@@ -29,10 +29,16 @@ Cada carpeta contiene su propio `.terraform`, es decir, en cada carpeta se ejecu
 
 ### Explicación de las prácticas
 
-- **paractica_1**: Hola mundo con terraform
-- **paractica_2**: Principio DRY
-- **paractica_3**: Ejemplo con Bucket s3 de AWS
-- **paractica_4**:
+- **practica_1**: Hola mundo con terraform
+- **practica_2**: Principio DRY
+- **practica_3**: Ejemplo con Bucket s3 de AWS
+- **practica_4**:
+
+### Notas del estidio
+
+En este repo se encuentran varias notas sobre Terraform en archivos `.md`. Todas estas notas se dividen por secciones y se encuentran en la carpeta `./notas`. A continuación se presenta el índice de las notas:
+
+
 
 ---
 
