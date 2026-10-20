@@ -32,7 +32,10 @@ Cada carpeta contiene su propio `.terraform`, es decir, en cada carpeta se ejecu
 - **practica_1**: Hola mundo con terraform
 - **practica_2**: Principio DRY
 - **practica_3**: Ejemplo con Bucket s3 de AWS
-- **practica_4**:
+- **practica_4**: Configuración de los providers (constraints)
+- **practica_5**: Variables y tipos de variables
+- **practica_6**: Práctica sobre variables - parte 1
+- 
 
 ### Notas del estidio
 
