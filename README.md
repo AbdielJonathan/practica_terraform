@@ -52,6 +52,8 @@ Para el uso de estos comandos debes entrar en alguna de las carpetas, practica_2
 - `terraform init`: Inicializa el motor de terraform. Se debe ejcutar cada vez que se agrega un nuevo proveedor para que el motor instale las dependencias de ese proveedor.
 - `terraform plan`: Muestra un plan de los cambios que se van a ejecutar
 - `terraform apply`: Aplica los cambios de la infraestructura declarada. Siempre lleva implícito un _terraform plan_ que te muestra los cambios y te pide confirmación previo a ejecutarse.
+  - `terraform apply --target aws_subnet.public_subnet`: El parámetro "target" sirve para indicar el recurso específico al que queremos aplicar el cambio. Es útil cuando, por ejemplo, nos urge aplicar algún cambio solo en un recurso específico de nuestra infraestructura, pero no de toda la configuración porque posiblemente no este lista.
+  - `terraform apply --auto-approve=true`: Para que no nos pregunte confirmación al aplicar la infraestructura
 - `terraform destroy`: Destruye la infraestructura declarada.
 - `terraform show`: Te muestra el estado actual de la infraestructura
 - `terraform output`: Te muestra los outputs definidos (ver práctica 6 como ejemplo)
