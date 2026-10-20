@@ -54,3 +54,5 @@ Para el uso de estos comandos debes entrar en alguna de las carpetas, practica_2
 - `terraform apply`: Aplica los cambios de la infraestructura declarada. Siempre lleva implícito un _terraform plan_ que te muestra los cambios y te pide confirmación previo a ejecutarse.
 - `terraform destroy`: Destruye la infraestructura declarada.
 - `terraform show`: Te muestra el estado actual de la infraestructura
+- `terraform output`: Te muestra los outputs definidos (ver práctica 6 como ejemplo)
+  - También se puede ver el output específico si conoces el nombre: `terraform output ec2_public_ip`
