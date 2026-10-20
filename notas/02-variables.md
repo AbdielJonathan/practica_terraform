@@ -71,3 +71,19 @@ Si deseas que un archivo se cargue de forma forzada sin cumplir con las reglas d
 Como vimos, hay varias formas de definir variables. Si se define la misma variable sobreescribiendose, se toman las siguientes prioridades:
 
 ![alt text](../assets/variables_3.png)
+
+## Tipos de variables
+
+![alt text](../assets/variables_4.png)
+
+![alt text](../assets/variables_5.png)
+
+![alt text](../assets/variables_6.png)
+
+![alt text](../assets/variables_7.png)
+
+![alt text](../assets/variables_8.png)
+
+![alt text](../assets/variables_9.png)
+
+![alt text](../assets/variables_10.png)
