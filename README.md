@@ -49,6 +49,9 @@ En este repo se encuentran varias notas sobre Terraform en archivos `.md`. Todas
 
 Para el uso de estos comandos debes entrar en alguna de las carpetas, practica_2 por ejemplo, y ejecutar: `terraform init`
 
+- `terraform validate`: Valida la sintaxis
+- `terraform fmt`: Formatea todos los archivos de tf
+- `terraform providers`: Lista los proveedores de nuestros archivos
 - `terraform init`: Inicializa el motor de terraform. Se debe ejcutar cada vez que se agrega un nuevo proveedor para que el motor instale las dependencias de ese proveedor.
 - `terraform plan`: Muestra un plan de los cambios que se van a ejecutar
 - `terraform apply`: Aplica los cambios de la infraestructura declarada. Siempre lleva implícito un _terraform plan_ que te muestra los cambios y te pide confirmación previo a ejecutarse.
@@ -58,3 +61,12 @@ Para el uso de estos comandos debes entrar en alguna de las carpetas, practica_2
 - `terraform show`: Te muestra el estado actual de la infraestructura
 - `terraform output`: Te muestra los outputs definidos (ver práctica 6 como ejemplo)
   - También se puede ver el output específico si conoces el nombre: `terraform output ec2_public_ip`
+- `less terraform.tfstate`: Muestra información del state
+- `terraform graph`: Da una lista de las dependencias en un tipo grafo
+  - Para pasarlo a svg usa `terraform graph | dot -Tsvg > graph.svg`
+
+**comandos de state**
+- `terraform state list`: Muestra una lista de recursos desplegados
+- `terraform state list show <recurso>.<nombre del recurso>`: El nombre del recurso lo puedes sacar del comando de arriba. Muestra un solo recurso a detalle
+- `terraform state mv`: Cambia el nombre de un recurso en el state. Eso con el fin de conservar la infraestructura y solo cambiar el nombre lógico en lugar de que se destruya y re aga de nuevo.
+- `terraform state rm`: Borra el seguimiento de un recurso del state. Una vez que borramos el recurso tenemos que eliminar o comentar el código del recurso
