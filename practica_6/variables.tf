@@ -23,3 +23,10 @@ variable "tags" {
   description = "Tags del proyecto"
   type        = map(string)
 }
+
+
+variable "sg_ingress_cidr" {
+  description = "CIDR for ingress traffic"
+  type = string
+  
+}

@@ -9,3 +9,6 @@ tags = {
   "owner" = "Abdiel"
   "Barry" = "Allen"
 }
+
+
+sg_ingress_cidr = "0.0.0.0/0" # all
