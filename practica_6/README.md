@@ -7,7 +7,8 @@ En esta sección se crea la siguiente IaC con TF.
 ## Notas relacionadas
 
 - 05-dependencias.md
-- 06-provisioners
+- 06-provisioners.md
+- 07-taint.md
 
 ## Conectarse a la EC2
 
