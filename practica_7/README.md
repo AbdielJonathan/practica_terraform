@@ -2,13 +2,7 @@
 
 En esta sección se crea la siguiente IaC con TF. 
 
-![alt text](../assets/infra_1.png)
-
-## Notas relacionadas
-
-- 05-dependencias.md
-- 06-provisioners.md
-- 07-taint.md
+![alt text](infra-2.png)
 
 ## Conectarse a la EC2
 
