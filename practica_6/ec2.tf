@@ -8,6 +8,6 @@ resource "aws_instance" "public_instance" {
 
   provisioner "local-exec" {
     when    = destroy
-    command = "echo  instancia con IP ${self.public_instance.public_ip} destruida >> datos_instancia.txt"
+    command = "echo  instancia con IP ${self.public_ip} destruida >> datos_instancia.txt"
   }
 }
