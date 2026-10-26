@@ -27,6 +27,12 @@ variable "tags" {
 
 variable "sg_ingress_cidr" {
   description = "CIDR for ingress traffic"
-  type = string
-  
+  type        = string
+
+}
+
+variable "ec2_specs" {
+  description = "Parámetros de la instancia"
+  type        = map(string)
+
 }

@@ -1,11 +1,13 @@
 resource "aws_instance" "public_instance" {
-  ami                    = "ami-0567589d25e06853e"
-  instance_type          = "t3.micro"
+  ami                    = var.ec2_specs.ami
+  instance_type          = var.ec2_specs.instance_type
   subnet_id              = aws_subnet.public_subnet.id
   key_name               = data.aws_key_pair.mykeyabdiel.key_name #viene de data.tf
   vpc_security_group_ids = [aws_security_group.sg_public_instance.id]
+  user_data              = file("userdata.sh")
 
   provisioner "local-exec" {
-    command = "echo  instancia creada con IP ${aws_instance.public_instance.public_ip} >> datos_instancia.txt"
+    when    = destroy
+    command = "echo  instancia con IP ${self.public_instance.public_ip} destruida >> datos_instancia.txt"
   }
 }

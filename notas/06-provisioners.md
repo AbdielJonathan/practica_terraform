@@ -100,3 +100,5 @@ resource "aws_instance" "public_instance" {
 ```
 
 Se escribe directamente el script con EOF. A diferencia de el provider remoto con el ejemplo anterior, user data ejecuta una sola vez el script al crearse la instancia en este ejemplo y siempre lo ejecuta con el usuario root.
+
+Alternativa en lugar de utilizar EOF y colocar directamente el script en el tf, se puede crear un archivo `.sh`, por ejepmlo: `user_data = file("userdata.sh")`. Vease la práctica 6 el archivo ec2.tf como ejecmplo

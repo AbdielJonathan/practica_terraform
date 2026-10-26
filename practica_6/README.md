@@ -1,8 +1,13 @@
 # Infraestructura de la práctica 6
 
-En esta sección se crea la siguiente IaC con TF
+En esta sección se crea la siguiente IaC con TF. 
 
 ![alt text](../assets/infra_1.png)
+
+## Notas relacionadas
+
+- 05-dependencias.md
+- 06-provisioners
 
 ## Conectarse a la EC2
 
