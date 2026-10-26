@@ -13,5 +13,3 @@ Para conectarse por ssh:
 2. `ssh -i mykeyabdiel.pem ec2-user@54.146.182.221` 
 
 ec2-user es el user por dafault
-
-![alt text](image.png)

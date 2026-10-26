@@ -64,6 +64,7 @@ Para el uso de estos comandos debes entrar en alguna de las carpetas, practica_2
 - `less terraform.tfstate`: Muestra información del state
 - `terraform graph`: Da una lista de las dependencias en un tipo grafo
   - Para pasarlo a svg usa `terraform graph | dot -Tsvg > graph.svg`
+- `terraform apply --replace=<recurso>.<nombre>`: Es equivalente a aplicar `terraform destroy --target=<recurso>.<nombre>` y luego `terraform apply --target=<recurso>.<nombre>`. Destruye y re crea el recurso.
 
 **comandos de state**
 - `terraform state list`: Muestra una lista de recursos desplegados
