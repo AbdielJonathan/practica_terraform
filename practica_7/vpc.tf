@@ -55,34 +55,16 @@ resource "aws_security_group" "sg_public_instance" {
   description = "Allow SSH inbound traffic and ALL egress traficc"
   vpc_id      = aws_vpc.vpc_abdiel_virginia.id
 
-  ingress {
-    description = "SSH over Internet"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = [var.sg_ingress_cidr]
+  dynamic "ingress" {
+    for_each = var.ingress_ports_list
+    content {
+      from_port   = ingress.value
+      to_port     = ingress.value
+      protocol    = "tcp"
+      cidr_blocks = [var.sg_ingress_cidr]
+    }
 
   }
-
-  # Esto debido a que en userdata.sh hablitiamos un servidor apache dentro de la instancia de ec2.tf
-  ingress {
-    description = "http over Internet"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = [var.sg_ingress_cidr]
-
-  }
-
-  ingress {
-    description = "https over Internet"
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = [var.sg_ingress_cidr]
-
-  }
-
   egress {
     from_port        = 0
     to_port          = 0
@@ -96,3 +78,30 @@ resource "aws_security_group" "sg_public_instance" {
   }
 
 }
+
+# NOTA: el dynamic remplaza todo lo siguiente:
+
+# ingress {
+#     description = "SSH over Internet"
+#     from_port   = 22
+#     to_port     = 22
+#     protocol    = "tcp"
+#     cidr_blocks = [var.sg_ingress_cidr]
+
+#   }
+
+# ingress {
+#   description = "http over Internet"
+#   from_port   = 80
+#   to_port     = 80
+#   protocol    = "tcp"
+#   cidr_blocks = [var.sg_ingress_cidr]
+# }
+
+# ingress {
+#   description = "https over Internet"
+#   from_port   = 443
+#   to_port     = 443
+#   protocol    = "tcp"
+#   cidr_blocks = [var.sg_ingress_cidr]
+# }
