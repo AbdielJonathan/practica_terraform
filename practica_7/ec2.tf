@@ -1,7 +1,7 @@
 variable "instancias" {
   description = "Nombre de las instancias"
   type        = list(string)
-  default     = ["apache", "jumpserver", "sql"]
+  default     = ["apache"]
 }
 
 resource "aws_instance" "public_instance" {
@@ -20,7 +20,7 @@ resource "aws_instance" "public_instance" {
 
 # Instancia condicional
 resource "aws_instance" "monitorign_instance" {
-  count                  = var.enable_monitoring ? 1 : 0
+  count                  = var.enable_monitoring ? 1 : 0 # Condición
   ami                    = var.ec2_specs.ami
   instance_type          = var.ec2_specs.instance_type
   subnet_id              = aws_subnet.public_subnet.id

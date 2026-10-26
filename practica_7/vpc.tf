@@ -64,6 +64,16 @@ resource "aws_security_group" "sg_public_instance" {
 
   }
 
+  # Esto debido a que en userdata.sh hablitiamos un servidor apache dentro de la instancia de ec2.tf
+  ingress {
+    description = "http over Internet"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = [var.sg_ingress_cidr]
+
+  }
+
   egress {
     from_port        = 0
     to_port          = 0

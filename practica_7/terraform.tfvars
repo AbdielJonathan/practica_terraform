@@ -20,7 +20,7 @@ sg_ingress_cidr = "0.0.0.0/0" # all
 
 ec2_specs = {
   "ami"           = "ami-04b938437b69a2c9c"
-  "instance_type" = "t2.micro"
+  "instance_type" = "t3.micro"
 }
 
 enable_monitoring = false
