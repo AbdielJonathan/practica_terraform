@@ -74,6 +74,15 @@ resource "aws_security_group" "sg_public_instance" {
 
   }
 
+  ingress {
+    description = "https over Internet"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = [var.sg_ingress_cidr]
+
+  }
+
   egress {
     from_port        = 0
     to_port          = 0
